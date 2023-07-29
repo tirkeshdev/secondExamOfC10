@@ -21,7 +21,8 @@ class BookController extends Controller
 
     public function index(Request $request){
         $request->validate([
-            'categorie' => 'nullable|integer|min:0',
+            'categories' => 'nullable|array|min:0',
+            'categories.*' => 'nullable|integer|min:1',
             'sort' => 'nullable|string|in:new-to-old,old-to-new,low-to-high,high-to-low',
             'page' => 'nullable|integer|min:1',
             'perPage' => 'nullable|integer|in:15,30,60,120',

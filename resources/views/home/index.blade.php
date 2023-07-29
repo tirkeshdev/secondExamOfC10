@@ -9,10 +9,10 @@
     @foreach($categoryBooks as $categoryBook)
         <div class="container-xl">
             <div class="display-4 text-danger pt-5">
-                <a href="{{ route('book.index', ['category' => $categoryBook['category']->id]) }}" class="link-danger text-decoration-none">
+                <a href="{{ route('book.index', ['categories' => [$categoryBook['category']->id]]) }}" class="link-danger text-decoration-none">
                     {{ $categoryBook['category']->name }}
                 </a>
-                <span class="text-warning h4 fw-normal">({{$categoryBook['category']->books_count}}Books)</span>
+                <span class="text-warning h4 fw-normal">({{$categoryBook['category']->books_count}}books)</span>
             </div>
 
 
