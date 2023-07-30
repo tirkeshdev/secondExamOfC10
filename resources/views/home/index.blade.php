@@ -26,11 +26,7 @@
                                     <h4 class="card-title">{{$book->name_tm}}</h4>
                                     <div class="card-text pb-3">{{$book->price}} TMT</div>
                                     @auth
-                                        <form action=" {{$book->sold ? '/' : '/add_to_cart'}}" method="{{$book->sold ? 'get' : 'post'}}">
-                                            @csrf
-                                            <input type="hidden" name="book_id" value="{{$book['id']}}">
-                                            <button class=" {{$book->sold ? 'btn btn-danger bi bi-check-lg' : 'btn btn-primary'}}">{{$book->sold ? 'Sold' : 'Add to cart'}}</button>
-                                        </form>
+                                        <a href="{{route('index')}}" class="btn btn-primary">Add to card</a>
                                     @else
                                         <a href="{{route('register')}}" class="btn btn-primary">Add to card</a>
                                     @endauth

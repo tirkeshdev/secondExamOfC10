@@ -9,15 +9,6 @@ use Illuminate\Http\Request;
 
 class BookController extends Controller
 {
-    public function addToCart(Request $req){
-        $cart = new Cart();
-        $cart -> user_id = $req->session()->get('user')['id'];
-        $cart -> book_id = $req->book_id;
-        $cart->save();
-        return redirect('/')->with([
-            'success' => 'Added to cart'
-        ]);
-    }
 
     public function index(Request $request){
         $request->validate([
