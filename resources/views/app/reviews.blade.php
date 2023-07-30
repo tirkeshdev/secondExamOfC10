@@ -16,7 +16,7 @@
                        <div>{{auth()->user()->name}}</div>
                        <div class="form-group">
                            <label for="message" class="text-danger h4 py-3">Message</label>
-                           <textarea name="message" placeholder="Enter your message" id="message " class="form-control"></textarea>
+                           <textarea name="message" placeholder="Enter your message" id="message " class="form-control" rows="5"></textarea>
                        </div>
                        <div class="pt-3">
                            <button class="btn btn-outline-danger btn-lg" type="submit">Submit</button>

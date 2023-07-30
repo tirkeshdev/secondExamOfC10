@@ -13,7 +13,7 @@
                     <a href="{{route('reviews')}}" class="text-decoration-none link-warning {{request()->routeIs('reviews') ? 'link-dark text-decoration-none bg-warning py-1 px-2 rounded-4': ''}}">Review</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link text-danger dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link text-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="bi-person-circle"></i> {{ auth()->user()->name }}
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end"><li>
@@ -28,12 +28,12 @@
                 </li>
             @else
                 <li class="nav-item">
-                    <a class="nav-link link-warning" href="{{ route('login') }}">
+                    <a class="nav-link link-warning {{request()->routeIs('login') ? 'nav-link link-dark bg-warning py-1 px-2' : ''}}" href="{{ route('login') }}">
                         <i class="bi-box-arrow-in-right"></i> Login
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link link-warning" href="{{ route('register') }}">
+                    <a class="nav-link link-warning {{request()->routeIs('register') ? 'nav-link link-dark bg-warning py-1 px-2' : ''}}" href="{{ route('register') }}">
                         <i class="bi-person-add"></i> Register
                     </a>
                 </li>
