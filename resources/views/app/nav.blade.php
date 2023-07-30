@@ -4,13 +4,13 @@
             <span class="h4 text-danger pe-2"> TGbookstore <i class="bi bi-book h4 text-danger"></i></span>
         </a>
         <a href="{{route('book.index')}}" class="px-3 d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis nav-link">
-            <span class="h5 text-danger  fw-normal{{request()->routeIs('book.index') ? ' text-dark bg-danger p-1 rounded-4' : ''}}"> Search <i class="bi bi-search h5 text-danger {{request()->routeIs('book.index') ? 'text-dark' : ''}}"></i></span>
+            <span class="h5 text-danger  fw-normal{{request()->routeIs('book.index') ? ' text-dark bg-danger py-1 px-2 rounded-4' : ''}}"> Search <i class="bi bi-search h5 text-danger {{request()->routeIs('book.index') ? 'text-dark' : ''}}"></i></span>
         </a>
 
         <ul class="nav nav-pills">
             @auth
                 <li class="nav-item pt-2 px-2">
-                    <a href="{{route('register')}}" class="text-decoration-none link-warning">Cart()</a>
+                    <a href="{{route('reviews')}}" class="text-decoration-none link-warning {{request()->routeIs('reviews') ? 'link-dark text-decoration-none bg-warning py-1 px-2 rounded-4': ''}}">Review</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link text-danger dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">

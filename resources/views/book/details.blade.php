@@ -36,11 +36,11 @@
                     <a href="{{route('register')}}" class="btn btn-primary">Add to card</a>
                 @endauth
 
-                @auth
-                    <a href="{{route('reviews')}}" class="btn btn-warning"> Review </a>
-                @else
-                    <a href="{{route('register')}}" class="btn btn-warning"> Review </a>
-                @endauth
+                {{--@auth--}}
+                    {{--<a href="{{route('reviews')}}" class="btn btn-warning"> Review </a>--}}
+                {{--@else--}}
+                    {{--<a href="{{route('register')}}" class="btn btn-warning"> Review </a>--}}
+                {{--@endauth--}}
             </div>
         </div>
     </div>
