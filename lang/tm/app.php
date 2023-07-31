@@ -1,7 +1,37 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Windows 10
- * Date: 23.07.2023
- * Time: 17:41
- */
+return [
+    'search' => 'Gözleg',
+    'review' => 'Teswir',
+    'addtocart' => 'Karta goş',
+    'book' => 'Kitap',
+    'books' => 'Kitaplar',
+    'category' => 'Kategoriyalar',
+    'barcode' => 'Barkod',
+    'author' => 'Yazyjy',
+    'publisher' => 'Neşir ediji',
+    'language' => 'Dili',
+    'bookcover' => 'kitap bukjasy',
+    'hard' => 'Gaty',
+    'paper' => 'Yumşak',
+    'pages' => 'sahypalar',
+    'publish year' => 'Neşir edilen yyly',
+    'description' => 'Beyany',
+    'sort' => 'Sort',
+    'perPage' => 'Sahypada',
+    'filter' => 'Filtr',
+    'clear' => 'Arassala',
+    'sold' => 'Satylan',
+    'newToOld' => 'Täzeden köna',
+    'oldToNew' => 'Köneden täzä',
+    'lowToHigh' => 'Arzandan gymmada',
+    'highToLow' => 'Gymmatdan arzana',
+
+    'login' => 'Giriş',
+    'register' => 'Registratsiya',
+    'logout' => 'Çykyş',
+    'name' => 'Ady',
+    'username' => 'Ulanyjy ady',
+    'password' => 'Parol',
+
+    'email' => 'E-mail',
+];

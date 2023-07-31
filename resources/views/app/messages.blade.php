@@ -7,7 +7,7 @@
             <div class="row justify-content-center   py-3">
                 <div class="border text-danger rounded-4 col-6">
                     <div class="fw-normal h4">
-                       <b>Name:</b> {{auth()->user()->name}}
+                       <b>@lang('name'):</b> {{auth()->user()->name}}
                     </div>
                     <div class="fw-normal h5">
                         <b>Message:</b> {{$el->message}}

@@ -20,4 +20,18 @@ class Category extends Model
         return $this->hasMany(Book::class);
     }
     public $timestamps = false;
+
+    public function getName()
+    {
+        $locale = app()->getLocale();
+        if ($locale == 'tm') {
+            return $this->name;
+        } elseif ($locale == 'en') {
+            return $this->name_en ?: $this->name;
+        } elseif ($locale == 'ru') {
+            return $this->name_ru ?: $this->name;
+        } else {
+            return $this->name;
+        }
+    }
 }

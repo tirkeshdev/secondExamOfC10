@@ -41,4 +41,21 @@ class MainController extends Controller
         return view('auth.login');
     }
 
+    public function locale($locale)
+    {
+        if ($locale == 'en') {
+            session()->put('locale', 'en');
+            return redirect()->back();
+        } elseif ($locale == 'tm') {
+            session()->put('locale', 'tm');
+            return redirect()->back();
+        }
+            elseif ($locale == 'ru') {
+            session()->put('locale', 'ru');
+            return redirect()->back();
+        } else {
+            return redirect()->back();
+        }
+    }
+
 }

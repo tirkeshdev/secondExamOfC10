@@ -12,7 +12,7 @@
                 <a href="{{ route('book.index', ['categories' => [$categoryBook['category']->id]]) }}" class="link-danger text-decoration-none">
                     {{ $categoryBook['category']->name }}
                 </a>
-                <span class="text-warning h4 fw-normal">({{$categoryBook['category']->books_count}}books)</span>
+                <span class="text-warning h4 fw-normal">({{$categoryBook['category']->books_count}} @lang('app.books'))</span>
             </div>
 
 
@@ -26,9 +26,9 @@
                                     <h4 class="card-title">{{$book->name_tm}}</h4>
                                     <div class="card-text pb-3">{{$book->price}} TMT</div>
                                     @auth
-                                        <a href="{{route('index')}}" class="btn btn-primary">Add to card</a>
+                                        <a href="{{route('index')}}" class="btn btn-primary">@lang('app.addtocart')</a>
                                     @else
-                                        <a href="{{route('register')}}" class="btn btn-primary">Add to card</a>
+                                        <a href="{{route('register')}}" class="btn btn-primary">@lang('app.addtocart')</a>
                                     @endauth
                                 </div>
                             </div>
