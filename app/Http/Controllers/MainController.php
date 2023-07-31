@@ -43,11 +43,11 @@ class MainController extends Controller
 
     public function locale($locale)
     {
-        if ($locale == 'en') {
-            session()->put('locale', 'en');
-            return redirect()->back();
-        } elseif ($locale == 'tm') {
+        if ($locale == 'tm') {
             session()->put('locale', 'tm');
+            return redirect()->back();
+        } elseif ($locale == 'en') {
+            session()->put('locale', 'en');
             return redirect()->back();
         }
             elseif ($locale == 'ru') {

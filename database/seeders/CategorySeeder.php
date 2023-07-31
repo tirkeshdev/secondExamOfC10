@@ -14,19 +14,19 @@ class CategorySeeder extends Seeder
     public function run(): void
     {
         $categories = [
-            ['name_en'=>'Fiction', 'name_tm' => 'Toslama', 'name_ru' => 'Фантастика'],
-            ['name_en'=>'Non-Fiction', 'name_tm' => 'Non-Toslama', 'name_ru' => 'Нон-Фантастика'],
-            ['name_en'=>'Novel', 'name_tm' => 'Roman', 'name_ru' => 'Роман'],
-            ['name_en'=>'Romance', 'name_tm' => 'Romantika', 'name_ru' => 'Романтика'],
-            ['name_en'=>'Children\'s book', 'name_tm' => 'Çagalaryň kitaby', 'name_ru' => 'Детские книги'],
-            ['name_en'=>'Biography', 'name_tm' => 'Biografiya', 'name_ru' => 'Биография'],
-            ['name_en'=>'Autobiography', 'name_tm' => 'Awtobiografiya', 'name_ru' => 'Автобиография'],
-            ['name_en'=>'Mystery', 'name_tm' => 'Syr' , 'name_ru' => 'Загадка'],
+            ['name'=>'Fiction', 'name_tm' => 'Toslama', 'name_ru' => 'Фантастика'],
+            ['name'=>'Non-Fiction', 'name_tm' => 'Non-Toslama', 'name_ru' => 'Нон-Фантастика'],
+            ['name'=>'Novel', 'name_tm' => 'Roman', 'name_ru' => 'Роман'],
+            ['name'=>'Romance', 'name_tm' => 'Romantika', 'name_ru' => 'Романтика'],
+            ['name'=>'Children\'s book', 'name_tm' => 'Çagalaryň kitaby', 'name_ru' => 'Детские книги'],
+            ['name'=>'Biography', 'name_tm' => 'Biografiya', 'name_ru' => 'Биография'],
+            ['name'=>'Autobiography', 'name_tm' => 'Awtobiografiya', 'name_ru' => 'Автобиография'],
+            ['name'=>'Mystery', 'name_tm' => 'Syr' , 'name_ru' => 'Загадка'],
         ];
 
         foreach ($categories as $category) {
             $obj = new Category();
-            $obj->name_en = $category['name_en'];
+            $obj->name = $category['name'];
             $obj->name_tm = $category['name_tm'];
             $obj->name_ru = $category['name_ru'];
             $obj->save();
