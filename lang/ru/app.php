@@ -8,7 +8,7 @@ return [
     'category' => 'Категории',
     'barcode' => 'Баркод',
     'author' => 'Писатель',
-    'publisher' => 'Издадель',
+    'publisher' => 'Издатель',
     'language' => 'Язык',
     'bookcover' => 'Книжная обложка',
     'hard' => 'Твердый',

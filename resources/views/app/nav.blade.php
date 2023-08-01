@@ -9,17 +9,17 @@
 
         <ul class="nav nav-pills">
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('locale', 'tm') }}">Türkmen</a>
+                <a class="nav-link link-success" href="{{ route('locale', 'tm') }}">Türkmen</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('locale', 'en') }}">English</a>
+                <a class="nav-link link-danger" href="{{ route('locale', 'en') }}">English</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('locale', 'ru') }}">Russian</a>
+                <a class="nav-link link-primary" href="{{ route('locale', 'ru') }}">Russian</a>
             </li>
             @auth
                 <li class="nav-item pt-2 px-2">
-                    <a href="{{route('reviews')}}" class="text-decoration-none link-warning {{request()->routeIs('reviews') ? 'link-dark text-decoration-none bg-warning py-1 px-2 rounded-4': ''}}">Review</a>
+                    <a href="{{route('reviews')}}" class="text-decoration-none link-warning {{request()->routeIs('reviews') ? 'link-dark text-decoration-none bg-warning py-1 px-2 rounded-4': ''}}">@lang('app.review')</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link text-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">

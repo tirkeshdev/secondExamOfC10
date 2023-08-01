@@ -10,10 +10,10 @@
             <div class="row justify-content-center py-3">
                 <div class="text-danger border rounded-4 col-8">
                     <div class="h4 fw-lighter">
-                        <b>UserName</b> : {{auth()->user()->username}}
+                        <b>@lang('app.username')</b> : {{auth()->user()->username}}
                     </div>
                     <div class="py-1 h4 fw-lighter">
-                        <b>Email</b> : {{auth()->user()->email}}
+                        <b>@lang('app.email')</b> : {{auth()->user()->email}}
                     </div>
                     <div class="h5 fw-light pb-2">
                         <b>Message</b> : {{$el->message}}

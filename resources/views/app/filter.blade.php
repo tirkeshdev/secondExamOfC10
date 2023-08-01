@@ -3,7 +3,7 @@
         <label for="categories" class="form-label fw-semibold text-danger">@lang('app.category')</label>
         <select class="form-select form-select-sm" name="categories[]" id="categories">
             @foreach($categories as $category)
-                <option value="{{ $category->id }}" {{ in_array($category->id, $f_categories) ? 'selected' : '' }}>{{ $category->name }}</option>
+                <option value="{{ $category->id }}" {{ in_array($category->id, $f_categories) ? 'selected' : '' }}>{{ $category->getName() }}</option>
             @endforeach
         </select>
     </div>
@@ -17,7 +17,7 @@
         </select>
     </div>
     <div class="mb-3">
-        <label for="perPage" class="form-label fw-semibold text-danger">@lang('app.perpage')</label>
+        <label for="perPage" class="form-label fw-semibold text-danger">@lang('app.perPage')</label>
         <select class="form-select form-select-sm" name="perPage" id="perPage">
             @foreach([15, 30, 60, 120] as $perPage)
                 <option value="{{ $perPage }}" {{ $perPage == $f_perPage ? 'selected' : '' }}>{{ $perPage }}</option>
@@ -27,7 +27,7 @@
     <div class="row g-3">
         <div class="col">
             <a href="{{ url()->current() }}" class="btn btn-secondary btn-sm w-100">
-                Clear
+                @lang('app.clear')
             </a>
         </div>
         <div class="col">

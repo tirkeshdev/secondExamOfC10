@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', [MainController::class, 'index'])->name('index');
-Route::get('/locale/{locale}', [MainController::class,'locale'])->name('locale')->whereIn('locale', ['tm', 'ru']);
+Route::get('/locale/{locale}', [MainController::class,'locale'])->name('locale')->whereIn('locale', ['tm', 'ru', 'en']);
 Route::get('/book/{id}', [MainController::class, 'details'])->name('details');
 Route::get('/search', [BookController::class,'index'])->name('book.index');
 Route::get('/reviews' , [ReviewController::class, 'reviews'])->name('reviews');
