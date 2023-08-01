@@ -2,6 +2,7 @@
 return [
     'search' => 'Gözleg',
     'review' => 'Teswir',
+    'languages' =>'Dil',
     'addtocart' => 'Karta goş',
     'book' => 'Kitap',
     'books' => 'Kitaplar',

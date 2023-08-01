@@ -2,6 +2,7 @@
 return [
     'search' => 'Поиск',
     'review' => 'Отзыв',
+    'languages' =>'Язык',
     'addtocart' => 'Добавить в карту',
     'book' => 'Книга',
     'books' => 'Книги',

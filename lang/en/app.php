@@ -3,6 +3,7 @@
 return [
     'search' => 'Search',
     'review' => 'Review',
+    'languages' =>'Language',
     'addtocart' => 'Add to cart',
     'book' => 'Book',
     'books' => 'Books',
