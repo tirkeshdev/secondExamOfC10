@@ -24,7 +24,7 @@
                                 <img class="img-fluid bg-secondary-subtle" src="{{$book->image}}" alt="image">
                                 <div class="card-body">
                                     <h4 class="card-title">{{$book->name_tm}}</h4>
-                                    <div class="card-text pb-3">{{$book->price}} TMT</div>
+                                    <div class="card-text pb-3">{{ round($book->price, 2) }} <small>TMT</small> </div>
                                     @auth
                                         <a href="{{route('index')}}" class="btn btn-primary">@lang('app.addtocart')</a>
                                     @else
