@@ -11,13 +11,13 @@
             <a class="nav-link dropdown-toggle link-info" href="#" data-bs-toggle="dropdown" aria-expanded="false">@lang('app.languages')</a>
             <ul class="dropdown-menu">
                 <li class="dropdown-item">
-                    <a class="nav-link" href="{{ route('locale', 'tm') }}"><img src="https://emojio.ru/images/apple-b/1f1f9-1f1f2.png" alt="" style="width: 20px"> </a>
+                    <a class="nav-link link-success" href="{{ route('locale', 'tm') }}">Türkmen</a>
                 </li>
                 <li class="dropdown-item">
-                    <a class="nav-link" href="{{ route('locale', 'en') }}"><img src="https://emojio.ru/images/apple-b/1f1ec-1f1e7.png" alt="" style="width: 20px"></a>
+                    <a class="nav-link link-danger" href="{{ route('locale', 'en') }}">English</a>
                 </li>
                 <li class="dropdown-item">
-                    <a class="nav-link" href="{{ route('locale', 'ru') }}"><img src="https://emojio.ru/images/apple-b/1f1f7-1f1fa.png" alt="" style="width: 20px"></a>
+                    <a class="nav-link link-primary" href="{{ route('locale', 'ru') }}">Русский</a>
                 </li>
             </ul>
 

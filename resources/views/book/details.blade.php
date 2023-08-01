@@ -16,12 +16,12 @@
                 <div class="h5 fw-normal ">@lang('app.barcode'): {{$book->barcode}}</div>
                 <div class="h5 fw-normal ">@lang('app.author'): {{$book->author->name}} {{$book->author->surname}}</div>
                 <div class="h5 fw-normal">@lang('app.publisher'): {{$book->publisher->name}}</div>
-                <div class="h5 fw-normal">@lang('app.category'): {{$book->category->name}}</div>
+                <div class="h5 fw-normal">@lang('app.category'): {{$book->category->getName()}}</div>
                 <div class="h5 fw-normal">@lang('app.language'): {{$book->language ? 'English' : 'Russian'}}</div>
                 <div class="h5 fw-normal">@lang('app.bookcover'): {{$book->bookcover ? 'Paper back' : 'Hard'}}</div>
                 <div class="h5 fw-normal">@lang('app.pages'): {{$book->page}}</div>
                 <div class="h5 fw-normal pb-2">@lang('app.publish year'): {{$book->year}}</div>
-                <div class="h5 fw-normal pb-2">@lang('app.description'): {{$book->description_tm}}</div>
+                <div class="h5 fw-normal pb-2">@lang('app.description'):  {{$book->description_tm}}</div>
                 @auth
                     <div class="h2 pb-2 text-success">{{$book->sold ? 'Sold' : ''}}</div>
                 @endauth
