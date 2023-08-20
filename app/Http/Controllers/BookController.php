@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Book;
 use App\Models\Category;
+use App\Models\Language;
 use Illuminate\Http\Request;
 
 class BookController extends Controller
@@ -27,6 +28,7 @@ class BookController extends Controller
             $query->whereIn('category_id', $f_categories);
         })
             ->with('category')
+
             ->when(isset($f_sort), function ($query) use ($f_sort) {
                 if ($f_sort == 'old-to-new') {
                     $query->orderBy('id');

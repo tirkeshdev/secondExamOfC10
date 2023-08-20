@@ -17,7 +17,13 @@
                 <div class="h5 fw-normal ">@lang('app.author'): {{$book->author->name}} {{$book->author->surname}}</div>
                 <div class="h5 fw-normal">@lang('app.publisher'): {{$book->publisher->name}}</div>
                 <div class="h5 fw-normal">@lang('app.category'): {{$book->category->getName()}}</div>
-                <div class="h5 fw-normal">@lang('app.language'): {{$book->language ? 'English' : 'Russian'}}</div>
+
+                    <div class="h5 fw-normal ">@lang('app.language'):
+                        @foreach($book->languages as $language)
+                            {{$language->getname()}}
+                        @endforeach
+                    </div>
+
                 <div class="h5 fw-normal">@lang('app.bookcover'): {{$book->bookcover ? 'Paper back' : 'Hard'}}</div>
                 <div class="h5 fw-normal">@lang('app.pages'): {{$book->page}}</div>
                 <div class="h5 fw-normal pb-2">@lang('app.publish year'): {{$book->year}}</div>

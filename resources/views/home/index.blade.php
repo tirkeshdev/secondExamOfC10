@@ -10,7 +10,7 @@
         <div class="container-xl">
             <div class="display-4 text-danger pt-5">
                 <a href="{{ route('book.index', ['categories' => [$categoryBook['category']->id]]) }}" class="link-danger text-decoration-none">
-                    {{ $categoryBook['category']->name }}
+                    {{ $categoryBook['category']->getname() }}
                 </a>
                 <span class="text-warning h4 fw-normal">({{$categoryBook['category']->books_count}} @lang('app.books'))</span>
             </div>

@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\Book;
+use App\Models\Language;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\DB;
 
@@ -10,6 +12,22 @@ use Illuminate\Support\Facades\DB;
  */
 class BookFactory extends Factory
 {
+
+    public function configure(): static
+    {
+        return $this->afterMaking(function (Book $book) {
+            // ...
+        })->afterCreating(function (Book $book) {
+            $languages = Language::inRandomOrder()
+                ->take(rand(1,3))
+                ->with($languages',')
+                ->get();
+
+            $book->languages()->sync($languages);
+        });
+    }
+
+
     public function definition(): array
     {
         $author = DB::table('authors')->inRandomOrder()->first();
@@ -20,7 +38,6 @@ class BookFactory extends Factory
         $name_en = null;
         $isSold = fake()->boolean(30);
         $isHard = fake()->boolean(50);
-        $isLanguage = fake()->boolean(50);
         return [
             'author_id' => $author->id,
             'publisher_id' => $publisher->id,
@@ -35,7 +52,6 @@ class BookFactory extends Factory
             'page' => rand(100, 800),
             'barcode' => fake()->isbn13(),
             'year' => rand(2000,2023),
-            'language' => $isLanguage,
             'bookcover' => $isHard,
 
         ];
