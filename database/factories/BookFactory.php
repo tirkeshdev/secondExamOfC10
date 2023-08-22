@@ -20,7 +20,6 @@ class BookFactory extends Factory
         })->afterCreating(function (Book $book) {
             $languages = Language::inRandomOrder()
                 ->take(rand(1,3))
-                ->with($languages',')
                 ->get();
 
             $book->languages()->sync($languages);
