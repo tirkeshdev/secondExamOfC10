@@ -12,6 +12,7 @@ class BookController extends Controller
 
     public function index(Request $request){
         $request->validate([
+            'q' => 'nullable|string|max:255',
             'categories' => 'nullable|array|min:0',
             'categories.*' => 'nullable|integer|min:1',
             'sort' => 'nullable|string|in:new-to-old,old-to-new,low-to-high,high-to-low',
@@ -19,15 +20,22 @@ class BookController extends Controller
             'perPage' => 'nullable|integer|in:15,30,60,120',
         ]);
 
+
+        $q = $request->q ?: null;
         $f_categories = $request->has('categories') ? $request->categories : [];
         $f_sort = $request->has('sort') ? $request->sort : null;
         $f_page = $request->has('page') ? $request->page : 1;
         $f_perPage = $request->has('perPage') ? $request->perPage : 15;
 
-        $books = Book::when($f_categories, function ($query) use ($f_categories) {
-            $query->whereIn('category_id', $f_categories);
+        $books = Book::when($q, function ($query, $q) {
+            return $query->where(function ($query) use ($q) {
+                $query->orWhere('name_tm', 'like', '%' . $q . '%');
+            });
         })
-            ->with('category')
+
+            ->when($f_categories, function ($query, $f_categories) {
+                $query->whereIn('category_id', $f_categories);
+            })
 
             ->when(isset($f_sort), function ($query) use ($f_sort) {
                 if ($f_sort == 'old-to-new') {
@@ -50,6 +58,7 @@ class BookController extends Controller
 
         return view('book.index')
             ->with([
+                'q' => $q,
                 'books' => $books,
                 'categories' => $categories,
                 'f_categories' => $f_categories,

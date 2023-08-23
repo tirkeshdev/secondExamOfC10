@@ -6,7 +6,7 @@ return [
     'addtocart' => 'Karta goş',
     'book' => 'Kitap',
     'books' => 'Kitaplar',
-    'category' => 'Kategoriyalar',
+    'category' => 'Kategoriya',
     'barcode' => 'Barkod',
     'author' => 'Yazyjy',
     'publisher' => 'Neşir ediji',

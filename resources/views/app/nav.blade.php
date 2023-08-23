@@ -3,11 +3,23 @@
         <a href="{{route('index')}}" class="text-decoration-none h4 link-danger">
             <span class="h4 text-danger pe-2"> TGbookstore <i class="bi bi-book h4 text-danger"></i></span>
         </a>
-        <a href="{{route('book.index')}}" class="px-3 d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis nav-link">
-            <span class="h5 text-danger  fw-normal{{request()->routeIs('book.index') ? ' text-dark bg-danger py-1 px-2 rounded-4' : ''}}"> @lang('app.search') <i class="bi bi-search h5 text-danger {{request()->routeIs('book.index') ? 'text-dark' : ''}}"></i></span>
-        </a>
+
+        <div  class="px-3 d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis nav-link">
+            <form action="{{ route('book.index') }}" class="px-2" role="search">
+                <input class="form-control" style="font-family: bootstrap-icons" type="search" name="q" value="{{ isset($q) ? $q : old('q') }}" placeholder="&#xF52A @lang('app.search')" aria-label="Search">
+            </form>
+        </div>
 
         <ul class="nav nav-pills">
+            <a class="nav-link dropdown-toggle link-danger" href="#" data-bs-toggle="dropdown" aria-expanded="true">@lang('app.category')</a>
+            <ul class="dropdown-menu bg-dark">
+                @foreach($categories as $category)
+                    <li class="dropdown-item ps-0">
+                        <a class="nav-link link-danger" href="{{ route('book.index', ['categories' => [$category->id]] ) }}">{{$category->name}}</a>
+                    </li>
+                @endforeach
+            </ul>
+
             <a class="nav-link dropdown-toggle link-info" href="#" data-bs-toggle="dropdown" aria-expanded="false">@lang('app.languages')</a>
             <ul class="dropdown-menu">
                 <li class="dropdown-item">
@@ -20,6 +32,7 @@
                     <a class="nav-link link-primary" href="{{ route('locale', 'ru') }}">Русский</a>
                 </li>
             </ul>
+
 
 
             @auth

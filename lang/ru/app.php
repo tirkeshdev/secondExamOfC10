@@ -6,7 +6,7 @@ return [
     'addtocart' => 'Добавить в карту',
     'book' => 'Книга',
     'books' => 'Книги',
-    'category' => 'Категории',
+    'category' => 'Категория',
     'barcode' => 'Баркод',
     'author' => 'Писатель',
     'publisher' => 'Издатель',

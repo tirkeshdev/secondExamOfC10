@@ -33,11 +33,14 @@ class MainController extends Controller
     }
 
     public function details($id){
+
         $book = Book::find($id);
+
         return view('book.details',['book' => $book]);
     }
 
     public function login(){
+
         return view('auth.login');
     }
 
