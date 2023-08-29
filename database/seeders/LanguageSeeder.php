@@ -15,7 +15,7 @@ class LanguageSeeder extends Seeder
     {
         $languages = [
             ['name' => 'English','name_ru' => 'Английский' , 'name_tm' => 'Iňlisçe'],
-            ['name' => '| Russian |', 'name_ru' => '| Русский |' , 'name_tm' => '| Rusça |'],
+            ['name' => 'Russian', 'name_ru' => 'Русский' , 'name_tm' => 'Rusça'],
             ['name' => 'Turkmen', 'name_ru' => 'Туркменский', 'name_tm' => 'Türkmençe'],
         ];
 

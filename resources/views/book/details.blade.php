@@ -20,7 +20,7 @@
 
                     <div class="h5 fw-normal ">@lang('app.language'):
                         @foreach($book->languages as $language)
-                            {{$language->getname()}}
+                            {{$language->getname()}}{{ $loop->last ? '':','}}
                         @endforeach
                     </div>
 

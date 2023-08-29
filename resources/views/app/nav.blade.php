@@ -15,7 +15,7 @@
             <ul class="dropdown-menu bg-dark">
                 @foreach($categories as $category)
                     <li class="dropdown-item ps-0">
-                        <a class="nav-link link-danger" href="{{ route('book.index', ['categories' => [$category->id]] ) }}">{{$category->name}}</a>
+                        <a class="nav-link link-danger" href="{{ route('book.index', ['categories' => [$category->id]] ) }}">{{$category->getname()}}</a>
                     </li>
                 @endforeach
             </ul>
