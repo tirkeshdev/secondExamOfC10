@@ -18,7 +18,7 @@ class MainController extends Controller
 
         $categoryBooks = [];
         foreach ($categories as $category) {
-            return $categoryBooks[] = [
+            $categoryBooks[] = [
                 'category' => $category,
                 'books' => Book::where('category_id', $category->id)
                     ->with('category')
