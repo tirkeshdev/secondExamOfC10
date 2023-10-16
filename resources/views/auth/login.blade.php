@@ -15,7 +15,8 @@
                 <label for="username" class="text-black">@lang('app.username')</label>
             </div>
             <div class="form-floating pb-3">
-                <input type="password" name="password"  class="form-control" id="floatingPassword" placeholder="Password" required>
+                <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password"
+                       required>
                 <label for="floatingPassword" class="text-black">@lang('app.password')</label>
             </div>
 

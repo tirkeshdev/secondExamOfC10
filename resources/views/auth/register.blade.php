@@ -12,19 +12,21 @@
 
             <div class="form-floating pb-3">
                 <input type="text" class="form-control" id="name" placeholder="name" name="name" required>
-                <label for="name"class="text-black">@lang('app.name')</label>
+                <label for="name" class="text-black">@lang('app.name')</label>
             </div>
 
             <div class="form-floating pb-3">
                 <input type="text" class="form-control" id="username" placeholder="username" name="username" required>
-                <label for="username"class="text-black">@lang('app.username')</label>
+                <label for="username" class="text-black">@lang('app.username')</label>
             </div>
             <div class="form-floating pb-3">
-                <input type="email" class="form-control" id="email" name="email" placeholder="example@email.com" required>
-                <label for="email"class="text-black">@lang('app.email')</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="example@email.com"
+                       required>
+                <label for="email" class="text-black">@lang('app.email')</label>
             </div>
             <div class="form-floating pb-3">
-                <input type="password" class="form-control" id="Password" name="password" placeholder="Password" required>
+                <input type="password" class="form-control" id="Password" name="password" placeholder="Password"
+                       required>
                 <label for="Password" class="text-black">@lang('app.password')</label>
             </div>
 

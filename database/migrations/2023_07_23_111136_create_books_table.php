@@ -23,7 +23,6 @@ return new class extends Migration
             $table->string('name_ru')->nullable();
             $table->string('name_en')->nullable();
             $table->string('image')->nullable();
-            $table->boolean('language')->default(0);
             $table->text('description_tm');
             $table->text('description_ru')->nullable();
             $table->text('description_en')->nullable();

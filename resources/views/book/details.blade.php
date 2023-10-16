@@ -18,16 +18,16 @@
                 <div class="h5 fw-normal">@lang('app.publisher'): {{$book->publisher->name}}</div>
                 <div class="h5 fw-normal">@lang('app.category'): {{$book->category->getName()}}</div>
 
-                    <div class="h5 fw-normal ">@lang('app.language'):
-                        @foreach($book->languages as $language)
-                            {{$language->getname()}}{{ $loop->last ? '':','}}
-                        @endforeach
-                    </div>
+                <div class="h5 fw-normal ">@lang('app.language'):
+                    @foreach($book->languages as $language)
+                        {{$language->getname()}}{{ $loop->last ? '':','}}
+                    @endforeach
+                </div>
 
                 <div class="h5 fw-normal">@lang('app.bookcover'): {{$book->bookcover ? 'Paper back' : 'Hard'}}</div>
                 <div class="h5 fw-normal">@lang('app.pages'): {{$book->page}}</div>
                 <div class="h5 fw-normal pb-2">@lang('app.publish year'): {{$book->year}}</div>
-                <div class="h5 fw-normal pb-2">@lang('app.description'):  {{$book->description_tm}}</div>
+                <div class="h5 fw-normal pb-2">@lang('app.description'): {{$book->description_tm}}</div>
                 @auth
                     <div class="h2 pb-2 text-success">{{$book->sold ? 'Sold' : ''}}</div>
                 @endauth
@@ -39,9 +39,9 @@
                 @endauth
 
                 {{--@auth--}}
-                    {{--<a href="{{route('reviews')}}" class="btn btn-warning"> Review </a>--}}
+                {{--<a href="{{route('reviews')}}" class="btn btn-warning"> Review </a>--}}
                 {{--@else--}}
-                    {{--<a href="{{route('register')}}" class="btn btn-warning"> Review </a>--}}
+                {{--<a href="{{route('register')}}" class="btn btn-warning"> Review </a>--}}
                 {{--@endauth--}}
             </div>
         </div>

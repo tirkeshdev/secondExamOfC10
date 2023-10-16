@@ -14,15 +14,18 @@
                     @foreach($books as $book)
                         <div class="col">
                             <a href="{{route('details', $book->id)}}" class="text-decoration-none link-danger">
-                                <div class="card bg-dark text-danger border-danger" style="width:20rem;margin:20px 0 24px 0">
+                                <div class="card bg-dark text-danger border-danger"
+                                     style="width:20rem;margin:20px 0 24px 0">
                                     <img class="img-fluid bg-secondary-subtle" src="{{$book->image}}" alt="image">
                                     <div class="card-body">
                                         <h4 class="card-title">{{$book->name_tm}}</h4>
                                         <div class="card-text pb-3">{{$book->price}} TMT</div>
                                         @auth
-                                            <a href="{{route('index')}}" class="btn btn-primary">@lang('app.addtocart')</a>
+                                            <a href="{{route('index')}}"
+                                               class="btn btn-primary">@lang('app.addtocart')</a>
                                         @else
-                                            <a href="{{route('register')}}" class="btn btn-primary">@lang('app.addtocart')</a>
+                                            <a href="{{route('register')}}"
+                                               class="btn btn-primary">@lang('app.addtocart')</a>
                                         @endauth
                                     </div>
                                 </div>

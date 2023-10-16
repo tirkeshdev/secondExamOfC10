@@ -9,7 +9,8 @@ use function Symfony\Component\Mime\Header\all;
 
 class MainController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         $categories = Category::withCount('books')
             ->orderBy('books_count', 'desc')
             ->take(8)
@@ -17,7 +18,7 @@ class MainController extends Controller
 
         $categoryBooks = [];
         foreach ($categories as $category) {
-            $categoryBooks[] = [
+            return $categoryBooks[] = [
                 'category' => $category,
                 'books' => Book::where('category_id', $category->id)
                     ->with('category')
@@ -32,14 +33,16 @@ class MainController extends Controller
             ]);
     }
 
-    public function details($id){
+    public function details($id)
+    {
 
         $book = Book::find($id);
 
-        return view('book.details',['book' => $book]);
+        return view('book.details', ['book' => $book]);
     }
 
-    public function login(){
+    public function login()
+    {
 
         return view('auth.login');
     }
@@ -52,8 +55,7 @@ class MainController extends Controller
         } elseif ($locale == 'en') {
             session()->put('locale', 'en');
             return redirect()->back();
-        }
-            elseif ($locale == 'ru') {
+        } elseif ($locale == 'ru') {
             session()->put('locale', 'ru');
             return redirect()->back();
         } else {
